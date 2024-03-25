@@ -1,0 +1,47 @@
+
+---
+
+version: "2"
+services:
+  fileserver:
+    image: "fileserver:1.0"
+    ports:
+      - "10022:22"                      # sftp
+      - "21:21"                         # ftp
+      - "20:20"                         # ftp 主动模式
+      - "10000-10010:10000-10010"       # ftp 被动模式
+      - "30880:80"                         # http
+      - "139:139"                       # samba
+      - "445:445"                       # samba
+
+    environment:
+      USER_PASSWORD: Jicaai#2024
+
+    volumes:
+      - ./fileserver:/mnt
+
+
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+    networks:
+      file_net:
+        # ipv4_address: 172.10.0.2
+        # ipv6_address: 1000::2
+
+    # entrypoint: "bash"
+
+
+networks:
+  file_net:
+    driver: bridge
+    enable_ipv6: true
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.10.0.0/24
+          gateway: 172.10.0.1
+        - subnet: 1000::/64
+          gateway: 1000::1

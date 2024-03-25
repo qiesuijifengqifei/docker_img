@@ -1,0 +1,1 @@
+docker build -t ubuntu_20.04:v1.0 .
