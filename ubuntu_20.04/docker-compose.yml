@@ -1,0 +1,156 @@
+
+---
+
+version: "2"
+services:
+  dev021:
+    image: "ubuntu_20.04:v1.0"
+    ports:
+      - "30122:22"
+    volumes:
+      - ./dev021/:/work
+      - ./tips:/etc/motd
+
+    environment:
+      USER_PASSWORD: integration
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+  dev022:
+    image: "ubuntu_20.04:v1.0"
+    ports:
+      - "30222:22"
+    volumes:
+      - ./dev022/:/work
+      - ./tips:/etc/motd
+
+    environment:
+      USER_PASSWORD: integration
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+
+
+  dev023:
+    image: "ubuntu_20.04:v1.0"
+    ports:
+      - "30322:22"
+    volumes:
+      - ./dev023/:/work
+      - ./tips:/etc/motd
+
+    environment:
+      USER_PASSWORD: integration
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+
+  dev024:
+    image: "ubuntu_20.04:v1.0"
+    ports:
+      - "30422:22"
+    volumes:
+      - ./dev024/:/work
+      - ./tips:/etc/motd
+
+    environment:
+      USER_PASSWORD: integration
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+
+  dev025:
+    image: "ubuntu_20.04:v1.0"
+    ports:
+      - "30522:22"
+    volumes:
+      - ./dev025/:/work
+      - ./tips:/etc/motd
+
+    environment:
+      USER_PASSWORD: integration
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+
+
+  dev026:
+    image: "ubuntu_20.04:v1.0"
+    ports:
+      - "30622:22"
+    volumes:
+      - ./dev026/:/work
+      - ./tips:/etc/motd
+
+
+    environment:
+      USER_PASSWORD: integration
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+
+  dev027:
+    image: "ubuntu_20.04:v1.0"
+    ports:
+      - "30722:22"
+    volumes:
+      - ./dev027/:/work
+      - ./tips:/etc/motd
+
+    environment:
+      USER_PASSWORD: integration
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+  dev028:
+    image: "ubuntu_20.04:v1.0"
+    ports:
+      - "30822:22"
+    volumes:
+      - ./dev028/:/work
+      - ./tips:/etc/motd
+
+    environment:
+      USER_PASSWORD: integration
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+
+  dev029:
+    image: "ubuntu_20.04:v1.0"
+    ports:
+      - "30922:22"
+
+    volumes:
+      - ./dev029/:/work
+      - ./tips:/etc/motd
+      
+
+    environment:
+      USER_PASSWORD: integration
+    privileged: true
+    stdin_open: true
+
+    restart: "always"
+
+
+
+
+
+
